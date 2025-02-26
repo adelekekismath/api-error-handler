@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { LanguageType, MESSAGES_BY_LANGUAGES, StatusCode } from "./constants";
 
 class ApiErrorHandler {

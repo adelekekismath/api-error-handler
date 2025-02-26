@@ -4,10 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-`response-error-handler` is an npm package designed to centralize and simplify API error handling in your applications. It supports HTTP errors, GraphQL errors, and network errors, and allows you to customize error messages based on language and application needs.
+`response-error-handler` is an npm package designed to centralize and simplify API error handling in your applications. 
 
 <br>
----
 
 ##  Features
 
@@ -17,8 +16,6 @@
 - **Callbacks**: Execute specific functions when errors occur (e.g., redirect users or show notifications).
 
 <br>
-<br>
----
 
 ## 📦 Installation
 

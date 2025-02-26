@@ -1,7 +1,12 @@
-# 🎨 API Error Handler
+#  Response API Error Handler
 
-`api-error-handler` is an npm package designed to centralize and simplify API error handling in your applications. It supports HTTP errors, GraphQL errors, and network errors, and allows you to customize error messages based on language and application needs.
+[![npm version](https://badge.fury.io/js/response-error-handler.svg)](https://badge.fury.io/js/response-error-handler)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+
+`response-error-handler` is an npm package designed to centralize and simplify API error handling in your applications. It supports HTTP errors, GraphQL errors, and network errors, and allows you to customize error messages based on language and application needs.
+
+<br>
 ---
 
 ##  Features
@@ -11,6 +16,8 @@
 - **Network Error Handling**: Detects internet connection issues.
 - **Callbacks**: Execute specific functions when errors occur (e.g., redirect users or show notifications).
 
+<br>
+<br>
 ---
 
 ## 📦 Installation
@@ -18,13 +25,16 @@
 Install the package via npm:
 
 ```bash
-npm install api-error-handler
+npm install response-error-handler
 ```
 or 
 
 ```bash
-npm i api-error-handler
+npm i response-error-handler
 ```
+
+<br>
+<br> 
 
 ## 🚀 Usage
 
@@ -32,7 +42,7 @@ npm i api-error-handler
 
 ```javascript
 
-import ApiErrorHandler from 'api-error-handler';
+import ApiErrorHandler from 'response-error-handler';
 
 const callbacks = {
     401: () => console.log("Redirecting to login..."),
@@ -59,6 +69,9 @@ try {
 
 ```
 
+<br>
+<br>
+
 ##  Configuration
 
 **Supported Languages**
@@ -83,13 +96,17 @@ const callbacks = {
 const errorHandler = new ApiErrorHandler("en", callbacks);
 ```
 
+
+<br>
+<br>
+
 ## Full Examples
 
 Example with Axios:
 
 ```javascript
 import axios from 'axios';
-import ApiErrorHandler from 'api-error-handler';
+import ApiErrorHandler from 'response-error-handler';
 
 const errorHandler = new ApiErrorHandler("en");
 
@@ -105,7 +122,7 @@ Example with GraphQL:
 
 ```javascript
 import { ApolloError } from '@apollo/client';
-import ApiErrorHandler from 'api-error-handler';
+import ApiErrorHandler from 'response-error-handler';
 
 const errorHandler = new ApiErrorHandler("en");
 
@@ -117,6 +134,10 @@ const errorMessage = errorHandler.handle(apolloError);
 console.error(errorMessage); // "GraphQL error occurred."
 ```
 
+
+<br>
+<br>
+
 ## 👨‍💻 Contribute
 
 Contributions are welcome! Feel free to submit a pull request or open an issue if you have any suggestions or feedback.
@@ -124,7 +145,7 @@ Contributions are welcome! Feel free to submit a pull request or open an issue i
 1. Clone the repository: 
 
 ```bash
-git clone https://github.com/adelekekismath/api-error-handler.git
+git clone https://github.com/adelekekismath/response-error-handler.git
 ```
 
 2. Install dependencies:

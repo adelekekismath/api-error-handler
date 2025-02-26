@@ -75,3 +75,5 @@ export const  MESSAGES_BY_LANGUAGES = {
 };
 
 export type LanguageType = "fr" | "en" | "es";
+
+export type StatusCode = 400 | 401 | 403 | 404 | 405 | 408 | 409 | 410 | 415 | 422 | 429 | 500 | 501 | 502 | 503 | 504 | 505 | 'default' | 'network';

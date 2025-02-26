@@ -1,4 +1,4 @@
-import { LanguageType, MESSAGES_BY_LANGUAGES } from "./constants";
+import { LanguageType, MESSAGES_BY_LANGUAGES, StatusCode } from "./constants";
 
 class ApiErrorHandler {
     private language: LanguageType;
@@ -9,7 +9,7 @@ class ApiErrorHandler {
         this.callbacks = callbacks;
     }
 
-    private getMessage(status: number | string): string {
+    private getMessage(status: StatusCode): string {
         const messages = MESSAGES_BY_LANGUAGES[this.language] || {};
         return messages[status] || messages['default'];
     }
@@ -29,7 +29,7 @@ class ApiErrorHandler {
         return error[0].message || this.getMessage('default');
     }
 
-    handleAxiosError(error: { response?: { status: number; data: { message: string } } }): string {
+    handleAxiosError(error: { response?: { status: StatusCode; data: { message: string } } }): string {
         if (error.response) {
             const { status, data } = error.response;
             this.callbacks[status]?.(error);
@@ -40,7 +40,7 @@ class ApiErrorHandler {
 
 
     handle(error: {
-        response?: { status: number; data: { message: string } };
+        response?: { status: StatusCode; data: { message: string } };
         graphQLErrors?: { message: string }[];
         message?: string;
     }): string {
